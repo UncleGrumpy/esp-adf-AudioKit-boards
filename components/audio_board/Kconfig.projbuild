@@ -2,11 +2,15 @@ menu "Audio HAL"
 
 choice AUDIO_BOARD
     prompt "Audio board"
-    default ESP_LYRAT_V4_3_BOARD
+    default ESP_AI_THINKER_AC101_BOARD
     help
         Select an audio board to use with the ESP-ADF
 config AUDIO_BOARD_CUSTOM
     bool "Custom audio board"
+config ESP_AI_THINKER_AC101_BOARD
+    bool "ESP32-AiThinker-Audio (ac101) V2.2"
+config ESP_AUDIO_KIT_BOARD
+    bool "ESP32-Audio-Kit V2.2"
 config ESP_LYRAT_V4_3_BOARD
     bool "ESP32-Lyrat V4.3"
 config ESP_LYRAT_V4_2_BOARD

@@ -4,10 +4,12 @@
 
 Espressif Systems Audio Development Framework (ESP-ADF) is the official audio development framework for the [ESP32](https://espressif.com/en/products/hardware/esp32/overview), [ESP32-S2](https://www.espressif.com/en/products/socs/esp32-s2) and [ESP32-S3](https://www.espressif.com/en/products/socs/esp32-s3) SoCs.
 
+> Note: The "main" branch of this fork is based off of ESP-ADF v2.4 with the addition of support for the ESP32 Audio Kit v2.2 boards (with es8388 codec) and the older AI Thinker Audio boards with the ac101 codec. The board are nearly impossible to tell apart, if you bought it after mid-to-late 2020 you can be almost certain it has the es8388, if it has an all black antenna it does for sure. The ac1010 codec were used for a limited number of the early AI Thinker Audio boards, these are also labeled v2.2 but have shiny copper traces on the antenna. The ac101 became unavailable and was replaced by the es8388 for the majority of these board. Unless you know for sure your board uses the ac101 you best bet is to try the ESP32-Audio-Kit v2.2 board in `menuconfig->Audio Hal->Audio board` first, if you get a codec failure error and have copper traces on you v2.2 board then you can select ESP32-AiThinker-Audio in menuconfig.
+<div align="center"><img src="https://user-images.githubusercontent.com/69995513/167242904-18700bfb-b4dd-4a07-8f1b-d3e4b9b20722.png" alt ="menuconfig->Audio Hal->Audio board" align="center" /></div>
+
 ## Overview
 
 ESP-ADF supports development of audio applications for the Espressif Systems SoCs in the most comprehensive way. With ESP-ADF, you can easily add features, develop audio applications from simple to complex:
-
 - Music player or recorder supports audio formats such as MP3, AAC, FLAC, WAV, OGG, OPUS, AMR, TS, EQ, Downmixer, Sonic, ALC, G.711 and etc.
 - Play music from sources: HTTP, HLS (HTTP Live Streaming), SPIFFS, SDCARD, A2DP-Source, A2DP-Sink, HFP and etc.
 - Integrate Media services such as: DLNA, VoIP and etc.
